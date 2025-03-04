@@ -35,4 +35,24 @@ html {
     width: 22vmin;
     border: none;
     border-radius: 8px;
+    font-size: 15vmin;
+    color: #9aec52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#restart {
+    font-size: 1.3em;
+    margin-top: 1.5em;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: #1a3718;
+    color: #ffffff;
+    border: none;
+    position: relative;
+    margin: 1.5em auto 0 auto;
+    display: block;
+    cursor: pointer;
 }
