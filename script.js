@@ -31,7 +31,7 @@ const disableButtons = () => {
 const enableButtons = () => {
     btnRef.forEach((element) => {
         element.innerText = "";
-        element.disabled = "false";
+        element.disabled = false;
     });
     //disable popup
     popupRef.classList.add("hide");
@@ -43,6 +43,11 @@ newGameBtn.addEventListener("click", () => {
     count = 0;
     enableButtons();
 });
+
+restartBtn.addEventListener("click", () => {
+    count = 0;
+    enableButtons();
+})
 
 //this function is excuted when a player wins
 const winFunction = (letter) => {
