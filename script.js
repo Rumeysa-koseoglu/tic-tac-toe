@@ -99,10 +99,13 @@ btnRef.forEach((element) => {
         }
         //Increment count on each click
         count += 1;
-        if (count === 9) {
+        if (count == 9) {
             drawFunction();
         }
         //Check for win on every click
         winChecker();
     });
 });
+
+//enable buttons and disable popup on page load
+window.onload = enableButtons;
