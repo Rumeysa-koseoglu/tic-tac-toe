@@ -46,6 +46,12 @@ const winFunction = (letter) => {
     }
 };
 
+//Function for draw
+const drawFunction = () => {
+    disableButtons();
+    msgRef.innerHTML = "&#x1F60E; <br> It's a Draw";
+};
+
 //new game
 newGameBtn.addEventListener("click", () => {
     count = 0;
@@ -94,7 +100,7 @@ btnRef.forEach((element) => {
         //Increment count on each click
         count += 1;
         if (count === 9) {
-            //It's a draw since there are a total of 9 boxed
+            drawFunction();
         }
         //Check for win on every click
         winChecker();
