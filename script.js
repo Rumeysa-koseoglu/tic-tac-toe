@@ -37,6 +37,14 @@ const enableButtons = () => {
     popupRef.classList.add("hide");
 };
 
+const winFunction = (letter) => {
+    disableButtons();
+    if (letter == "X") {
+        msgRef.innerHTML = "&#x1F389; <br> 'X' Wins";
+    } else { 
+        msgRef.innerHTML = "&#x1F389; <br> 'O' Wins";
+    }
+};
 
 //new game
 newGameBtn.addEventListener("click", () => {
@@ -48,11 +56,6 @@ restartBtn.addEventListener("click", () => {
     count = 0;
     enableButtons();
 })
-
-//this function is excuted when a player wins
-const winFunction = (letter) => {
-    disableButtons();
-};
 
 //Win logic
 const winChecker = () => {
