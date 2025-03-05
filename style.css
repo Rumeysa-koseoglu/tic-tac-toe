@@ -56,3 +56,36 @@ html {
     display: block;
     cursor: pointer;
 }
+
+.popup {
+    background: linear-gradient(135deg, #9aec52, #0a6517);
+    height: 100%;
+    width:100%;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 12vmin;
+}
+
+#new-game {
+    font-size: 0.6em;
+    padding: 0.5em 1em;
+    background-color: #1a3718;
+    color: #ffffff;
+    border-radius: 0.2em;
+    border: none;
+}
+
+#message {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1em;
+}
+
+.popup.hide {
+    display: none;
+}
