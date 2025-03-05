@@ -20,6 +20,26 @@ let winingPattern = [
 let xTurn = true;
 let count = 0;
 
+//Win logic
+const winChecker = () => {
+    //Loop through all win patterns
+    for (let i of winingPattern) {
+        let [element1, element2, element3] = [
+            btnRef[i[0]].innerText,
+            btnRef[i[1]].innerText,
+            btnRef[i[2]].innerText,
+        ];
+        //Check if elements are filled
+        //If 3 empty elements are same and would give win as would
+        if (element1 != "" && (element2 != "") && (element3 != "")) {
+            if (element1 == element2 && element2 == element3) {
+                //If all 3 buttons have same values then pass the value to winFunction
+                winFunction(element);
+            }
+        }
+    }
+}
+
 //Display X/O on click
 btnRef.forEach((element) => {
     element.addEventListener("click", () => {
@@ -34,5 +54,12 @@ btnRef.forEach((element) => {
             element.innerText = "O";
             element.disabled = true;
         }
+        //Increment count on each click
+        count += 1;
+        if (count === 9) {
+            //It's a draw since there are a total of 9 boxed
+        }
+        //Check for win on every click
+        winChecker();
     });
 });
