@@ -15,3 +15,24 @@ let winingPattern = [
     [0, 4, 8],
     [2, 4, 6],
 ];
+
+//Player 'X' plays first
+let xTurn = true;
+let count = 0;
+
+//Display X/O on click
+btnRef.forEach((element) => {
+    element.addEventListener("click", () => {
+        if (xTurn) {
+            xTurn = false;
+            //display X
+            element.innerText = "X";
+            element.disabled = true;
+        } else {
+            xTurn = true;
+            //display Y
+            element.innerText = "O";
+            element.disabled = true;
+        }
+    });
+});
