@@ -25,9 +25,11 @@ let count = 0;
 
 // Disable all buttons when the winner is determined, prevent further moves, and show the popup
 const disableButtons = () => {
+    setTimeout(() => {
     btnRef.forEach((element) => (element.disabled = true));
     //enable popup
     popupRef.classList.remove("hide");
+    }, 300);
 };
 
 //enable all buttons (for new game and restart)
