@@ -44,9 +44,10 @@ html {
 }
 
 #restart {
-    font-size: 1.3em;
+    width: 200px;
+    font-size: 1.4em;
     margin-top: 1.5em;
-    padding: 1em;
+    padding: 1em 1.5em;
     border-radius: 8px;
     background-color: #1a3718;
     color: #ffffff;
