@@ -44,16 +44,16 @@ html {
 }
 
 #restart {
-    width: 200px;
+    width: 70vmin;
     font-size: 1.4em;
     margin-top: 1.5em;
-    padding: 1em 1.5em;
+    padding: 1.5em 1.5em;
     border-radius: 8px;
     background-color: #1a3718;
     color: #ffffff;
     border: none;
     position: relative;
-    margin: 1.5em auto 0 auto;
+    margin: 2em auto 0 auto;
     display: block;
     cursor: pointer;
 }
@@ -61,7 +61,7 @@ html {
 .popup {
     background: linear-gradient(135deg, #9aec52, #0a6517);
     height: 100%;
-    width:100%;
+    width: 100%;
     position: absolute;
     display: flex;
     z-index: 2;
@@ -89,4 +89,30 @@ html {
 
 .popup.hide {
     display: none;
+}
+
+
+/* mobile responsiveness*/
+
+@media (max-width: 768px) {
+
+
+    #restart {
+        width: 70vmin;
+        padding: 0.9em 1.5em;
+        margin: 1.5em auto 0 auto;
+    }
+
+}
+
+
+
+@media (max-width:480px) {
+
+
+    #restart {
+        width: 70vmin;
+        padding: 0.9em 1.5em;
+        margin: 1.5em auto 0 auto;
+    }
 }
